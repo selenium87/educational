@@ -56,7 +56,10 @@ public void Startup(String browse) throws IOException {
 		
 		
 	}
-	
+	public void afterclass() {
+		
+		driver.quit();
+	}
 	
 	
 }
