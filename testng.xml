@@ -4,7 +4,11 @@
   <test thread-count="5" name="Test">
   <parameter name="browser" value="chrome"></parameter>
  <classes>
- <class name="execution.Base"></class>
+ <class name="execution.ShipmentTest">
+ <methods>
+<exclude name="view"></exclude>
+ </methods>
+ </class>
  </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

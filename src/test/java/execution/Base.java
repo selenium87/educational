@@ -14,6 +14,9 @@ import org.openqa.selenium.*;
 import org.testng.annotations.*;
 import org.testng.annotations.Parameters;
 
+import pages.Home;
+import pages.Shipment;
+
 
 public class Base {
 	public WebDriver driver;
@@ -46,6 +49,7 @@ public void Startup(String browse) throws IOException {
 	driver.findElement(By.id("Password")).sendKeys("admin");
 	driver.findElement(By.xpath("//input[@type='submit']")).click();
 	
+
 	}
 	public void screens() throws IOException {
 		
@@ -56,9 +60,11 @@ public void Startup(String browse) throws IOException {
 		
 		
 	}
+
+
 	public void afterclass() {
 		
-		driver.quit();
+	//	driver.quit();
 	}
 	
 	
