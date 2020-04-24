@@ -21,7 +21,7 @@ public class Base {
 	
 	@BeforeClass
 	@Parameters("browser")
-public void Startup(String browse) throws IOException {
+	public void Startup(String browse) throws IOException {
 	if (browse.contentEquals("chrome")) {
 	System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\driver\\chromedriver.exe");
 	
@@ -49,16 +49,18 @@ public void Startup(String browse) throws IOException {
 	}
 	public void screens() throws IOException {
 		
-		String stamp =new SimpleDateFormat("E, MMM-dd-yyyy-HH-mm-ss").format(new Date());
+		String stamp =new SimpleDateFormat("E, MMM-dd-yyyy-HH-mm-ss.SSS").format(new Date());
 	    File take =((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		
 		FileUtils.copyFile(take,new File(System.getProperty("user.dir") +"\\screenshots\\"+stamp+".png"));
 		
 		
 	}
+	
+	@AfterClass
 	public void afterclass() {
 		
-		driver.quit();
+		driver.close();
 	}
 	
 	
