@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="11" passed="11">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="13529" started-at="2020-04-22T10:25:57 PDT" finished-at="2020-04-22T10:26:11 PDT">
+  <suite name="Suite" duration-ms="15939" started-at="2020-04-23T22:07:31 EDT" finished-at="2020-04-23T22:07:47 EDT">
     <groups>
     </groups>
-    <test name="Test" duration-ms="13529" started-at="2020-04-22T10:25:57 PDT" finished-at="2020-04-22T10:26:11 PDT">
-      <class name="execution.Base">
-        <test-method status="PASS" signature="Startup(java.lang.String)[pri:0, instance:execution.Base@3224f60b]" name="Startup" duration-ms="13493" started-at="2020-04-22T10:25:57 PDT" finished-at="2020-04-22T10:26:11 PDT">
+    <test name="Test" duration-ms="15939" started-at="2020-04-23T22:07:31 EDT" finished-at="2020-04-23T22:07:47 EDT">
+      <class name="execution.Bestsellers">
+        <test-method status="PASS" signature="Startup(java.lang.String)[pri:0, instance:execution.Bestsellers@4f063c0a]" name="Startup" is-config="true" duration-ms="13543" started-at="2020-04-23T22:07:31 EDT" finished-at="2020-04-23T22:07:45 EDT">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,163 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Startup -->
-      </class> <!-- execution.Base -->
+        <test-method status="PASS" signature="test1()[pri:0, instance:execution.Bestsellers@4f063c0a]" name="test1" duration-ms="1175" started-at="2020-04-23T22:07:45 EDT" finished-at="2020-04-23T22:07:46 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+        <test-method status="PASS" signature="test2(java.lang.String, java.lang.String)[pri:0, instance:execution.Bestsellers@4f063c0a]" name="test2" duration-ms="105" started-at="2020-04-23T22:07:46 EDT" data-provider="dp" finished-at="2020-04-23T22:07:46 EDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[StartDate]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[04/01/2020]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method status="PASS" signature="test2(java.lang.String, java.lang.String)[pri:0, instance:execution.Bestsellers@4f063c0a]" name="test2" duration-ms="120" started-at="2020-04-23T22:07:46 EDT" data-provider="dp" finished-at="2020-04-23T22:07:46 EDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[EndDate]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[04/30/2020]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method status="PASS" signature="test2(java.lang.String, java.lang.String)[pri:0, instance:execution.Bestsellers@4f063c0a]" name="test2" duration-ms="81" started-at="2020-04-23T22:07:46 EDT" data-provider="dp" finished-at="2020-04-23T22:07:46 EDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[StoreId]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Your store name]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method status="PASS" signature="test2(java.lang.String, java.lang.String)[pri:0, instance:execution.Bestsellers@4f063c0a]" name="test2" duration-ms="72" started-at="2020-04-23T22:07:46 EDT" data-provider="dp" finished-at="2020-04-23T22:07:46 EDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[OrderStatusId]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Processing]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method status="PASS" signature="test2(java.lang.String, java.lang.String)[pri:0, instance:execution.Bestsellers@4f063c0a]" name="test2" duration-ms="74" started-at="2020-04-23T22:07:46 EDT" data-provider="dp" finished-at="2020-04-23T22:07:46 EDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[PaymentStatusId]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Authorized]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method status="PASS" signature="test2(java.lang.String, java.lang.String)[pri:0, instance:execution.Bestsellers@4f063c0a]" name="test2" duration-ms="73" started-at="2020-04-23T22:07:46 EDT" data-provider="dp" finished-at="2020-04-23T22:07:46 EDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[CategoryId]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Electronics >> Camera & photo]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method status="PASS" signature="test2(java.lang.String, java.lang.String)[pri:0, instance:execution.Bestsellers@4f063c0a]" name="test2" duration-ms="76" started-at="2020-04-23T22:07:46 EDT" data-provider="dp" finished-at="2020-04-23T22:07:47 EDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ManufacturerId]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Apple]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method status="PASS" signature="test2(java.lang.String, java.lang.String)[pri:0, instance:execution.Bestsellers@4f063c0a]" name="test2" duration-ms="73" started-at="2020-04-23T22:07:47 EDT" data-provider="dp" finished-at="2020-04-23T22:07:47 EDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[BillingCountryId]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Pakistan]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method status="PASS" signature="test2(java.lang.String, java.lang.String)[pri:0, instance:execution.Bestsellers@4f063c0a]" name="test2" duration-ms="73" started-at="2020-04-23T22:07:47 EDT" data-provider="dp" finished-at="2020-04-23T22:07:47 EDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[VendorId]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Vendor 2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method status="PASS" signature="test3()[pri:0, instance:execution.Bestsellers@4f063c0a]" name="test3" duration-ms="386" started-at="2020-04-23T22:07:47 EDT" finished-at="2020-04-23T22:07:47 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test3 -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:execution.Bestsellers@4f063c0a]" name="teardown" is-config="true" duration-ms="52" started-at="2020-04-23T22:07:47 EDT" finished-at="2020-04-23T22:07:47 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- execution.Bestsellers -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
