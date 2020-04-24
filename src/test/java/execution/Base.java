@@ -14,10 +14,11 @@ import org.openqa.selenium.*;
 import org.testng.annotations.*;
 import org.testng.annotations.Parameters;
 
+import utilities.EmalPOM;
+
 
 public class Base {
 	public WebDriver driver;
-
 	
 	@BeforeClass
 	@Parameters("browser")
@@ -56,13 +57,15 @@ public void Startup(String browse) throws IOException {
 		
 		
 	}
+	@AfterClass
 	public void afterclass() {
 		
-		driver.quit();
+		driver.close();
 	}
 	
 	
 }
+
 	
 	
 	

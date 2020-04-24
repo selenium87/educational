@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="13529" started-at="2020-04-22T10:25:57 PDT" finished-at="2020-04-22T10:26:11 PDT">
+  <suite started-at="2020-04-23T23:03:03 EDT" name="Suite" finished-at="2020-04-23T23:04:11 EDT" duration-ms="68187">
     <groups>
     </groups>
-    <test name="Test" duration-ms="13529" started-at="2020-04-22T10:25:57 PDT" finished-at="2020-04-22T10:26:11 PDT">
-      <class name="execution.Base">
-        <test-method status="PASS" signature="Startup(java.lang.String)[pri:0, instance:execution.Base@3224f60b]" name="Startup" duration-ms="13493" started-at="2020-04-22T10:25:57 PDT" finished-at="2020-04-22T10:26:11 PDT">
+    <test started-at="2020-04-23T23:03:03 EDT" name="Test" finished-at="2020-04-23T23:04:11 EDT" duration-ms="68187">
+      <class name="execution.CustomerTest">
+        <test-method is-config="true" signature="Startup(java.lang.String)[pri:0, instance:execution.CustomerTest@37918c79]" started-at="2020-04-23T23:03:03 EDT" name="Startup" finished-at="2020-04-23T23:03:34 EDT" duration-ms="30797" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Startup -->
-      </class> <!-- execution.Base -->
+        <test-method signature="withFirstSetOfData()[pri:1, instance:execution.CustomerTest@37918c79]" started-at="2020-04-23T23:03:34 EDT" name="withFirstSetOfData" finished-at="2020-04-23T23:03:56 EDT" duration-ms="22464" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- withFirstSetOfData -->
+        <test-method signature="withSecondSetOfData()[pri:2, instance:execution.CustomerTest@37918c79]" started-at="2020-04-23T23:03:56 EDT" name="withSecondSetOfData" finished-at="2020-04-23T23:04:09 EDT" duration-ms="13393" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- withSecondSetOfData -->
+        <test-method is-config="true" signature="afterclass()[pri:0, instance:execution.CustomerTest@37918c79]" started-at="2020-04-23T23:04:09 EDT" name="afterclass" finished-at="2020-04-23T23:04:11 EDT" duration-ms="1450" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterclass -->
+      </class> <!-- execution.CustomerTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
