@@ -14,13 +14,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
-import utilities.EmalPOM;
+import pages.EmalsPOM;
 
 public class CustomerTest extends Base {
 
 	@Test(priority = 1)
 	public void withFirstSetOfData() throws IOException, InterruptedException {
-		EmalPOM pom = new EmalPOM(driver);
+		EmalsPOM pom = new EmalsPOM(driver);
 		Properties prop = new Properties();
 		InputStream input = new FileInputStream(
 				System.getProperty("user.dir") + "\\src\\test\\java\\utilities\\EmalData.properties");
@@ -52,7 +52,7 @@ public class CustomerTest extends Base {
 	@Test(priority = 2)
 
 	public void withSecondSetOfData() throws IOException, InterruptedException {
-		EmalPOM pom = new EmalPOM(driver);
+		EmalsPOM pom = new EmalsPOM(driver);
 		Properties prop = new Properties();
 		InputStream input = new FileInputStream(
 				System.getProperty("user.dir") + "\\src\\test\\java\\utilities\\EmalData.properties");

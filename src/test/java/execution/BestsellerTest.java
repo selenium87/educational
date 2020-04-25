@@ -9,10 +9,10 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import pages.Report_BestSellerPom;
+import pages.Report_BestSellerPOM;
 
 
-public class Bestseller extends Base{
+public class BestsellerTest extends Base{
 
 	Properties prop = new Properties();
 
@@ -20,7 +20,7 @@ public class Bestseller extends Base{
 	
 	@Test
 	public void test1() {
-		Report_BestSellerPom obj = new Report_BestSellerPom(driver);		
+		Report_BestSellerPOM obj = new Report_BestSellerPOM(driver);		
 		obj.mainhd().click();
 		obj.subhd().click();
 	}
@@ -38,8 +38,7 @@ public class Bestseller extends Base{
 	
 	@Test
 	public void test3() throws IOException {
-		Report_BestSellerPom obj = new Report_BestSellerPom(driver);
-		screens();
+		Report_BestSellerPOM obj = new Report_BestSellerPOM(driver);
 		obj.pushsearch().click();
 	}
 
