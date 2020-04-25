@@ -7,6 +7,8 @@ import org.openqa.selenium.support.PageFactory;
 
 public class Home {
 
+
+	
 	@FindBy(id = "Email")
 	private WebElement loginName;
 	
