@@ -71,7 +71,7 @@ public class CustomerTest extends Base {
 		Thread.sleep(2000);
 		pom.Button.click();
 		Thread.sleep(3000);
-	}//// div[@class='icon-collapse']
+	}
 
 	@Test(priority = 2)
 
