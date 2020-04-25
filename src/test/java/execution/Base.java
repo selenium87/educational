@@ -25,13 +25,17 @@ import pages.Home;
 
 @Listeners(utilities.ListenerClass.class)
 public class Base {
-public  WebDriver driver;
-	
+
+
+
+public WebDriver driver;
+
+
 	@BeforeClass
 	@Parameters("browser")
 	public void Startup(String browse) throws IOException {
 	
-	Home h= new Home(driver);
+
 	
 	if (browse.contentEquals("chrome")) {
 		System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\driver\\chromedriver.exe");
@@ -48,10 +52,13 @@ public  WebDriver driver;
 		driver.get("https://admin-demo.nopcommerce.com/admin/");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		
 		driver.findElement(By.id("Email")).sendKeys("admin@yourstore.com");
-		//h.nameMain().sendKeys("admin@yourstore.com");
+		//nameMain().sendKeys("admin@yourstore.com");
+	
 		driver.findElement(By.id("Password")).sendKeys("admin");		
 		//h.passMain().sendKeys("admin");
+		
 		driver.findElement(By.xpath("//input[@type='submit']")).click();
 		//h.loginButton().click();
 	}
@@ -63,13 +70,10 @@ public  WebDriver driver;
 		FileUtils.copyFile(take,new File(System.getProperty("user.dir") + "\\screenshots\\"+string+stamp+".png"));
 	}
 
-
 	@AfterClass
 	public void afterclass() {
 		driver.close();
 	}
-	
-	
 }
 
 	
