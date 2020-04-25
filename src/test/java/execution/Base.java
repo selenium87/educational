@@ -25,7 +25,7 @@ import pages.Home;
 
 @Listeners(utilities.ListenerClass.class)
 public class Base {
-public static WebDriver driver;
+public  WebDriver driver;
 	
 	@BeforeClass
 	@Parameters("browser")
