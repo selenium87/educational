@@ -28,6 +28,31 @@ public class CustomerTest extends Base {
 		Thread.sleep(2000);
 		pom.Customers.click();
 		pom.CustomerSub.click();
+
+		try {
+			pom.EmailFeild.sendKeys("email1");
+			pom.FirstName.sendKeys(prop.getProperty("firstname1"));
+			pom.LastName.sendKeys(prop.getProperty("lastname1"));
+			Select selmonth = new Select(pom.Month);
+			selmonth.selectByIndex(4);
+			Select selday = new Select(pom.Day);
+			selday.selectByIndex(12);
+			pom.Company.sendKeys(prop.getProperty("company1"));
+			pom.IpAddress.sendKeys("ipaddress1");
+			pom.Regestered.click();
+			for (int i = 0; i < 3; i++) {
+				pom.Search.sendKeys(Keys.ARROW_DOWN);
+
+			}
+			pom.Search.sendKeys(Keys.ENTER);
+			Thread.sleep(2000);
+			pom.Button.click();
+			Thread.sleep(3000);
+
+		} catch (Exception e) {
+			driver.findElement(By.xpath("//div[@class='icon-collapse']")).click();
+		}
+
 		pom.EmailFeild.sendKeys("email1");
 		pom.FirstName.sendKeys(prop.getProperty("firstname1"));
 		pom.LastName.sendKeys(prop.getProperty("lastname1"));
@@ -40,14 +65,13 @@ public class CustomerTest extends Base {
 		pom.Regestered.click();
 		for (int i = 0; i < 3; i++) {
 			pom.Search.sendKeys(Keys.ARROW_DOWN);
-		
+
 		}
 		pom.Search.sendKeys(Keys.ENTER);
 		Thread.sleep(2000);
 		pom.Button.click();
 		Thread.sleep(3000);
-
-	}
+	}//// div[@class='icon-collapse']
 
 	@Test(priority = 2)
 
