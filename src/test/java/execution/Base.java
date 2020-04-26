@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
@@ -21,6 +22,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 
 import pages.Home;
+import utilities.Demo;
 
 
 @Listeners(utilities.ListenerClass.class)
@@ -29,7 +31,8 @@ public class Base {
 
 
 public WebDriver driver;
-
+public Demo de= new Demo();
+public Properties prp = new Properties();
 
 	@BeforeClass
 	@Parameters("browser")
@@ -48,19 +51,28 @@ public WebDriver driver;
 		else {
 			System.out.println("please choose right browser");
 		}
-	
-		driver.get("https://admin-demo.nopcommerce.com/admin/");
+		prp.load(de.data());
+		driver.get(prp.getProperty("url"));
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		
-		driver.findElement(By.id("Email")).sendKeys("admin@yourstore.com");
+		driver.findElement(By.id(prp.getProperty("e"))).sendKeys(prp.getProperty("username"));
+		
+		driver.findElement(By.id(prp.getProperty("p"))).sendKeys(prp.getProperty("password"));	
+		
+		
+		//driver.findElement(By.xpath(prp.getProperty("email"))).sendKeys("admin1");
+		//mysendkey("email", "admin1");
+		
+		
 		//nameMain().sendKeys("admin@yourstore.com");
 	
-		driver.findElement(By.id("Password")).sendKeys("admin");		
+		//driver.findElement(By.id(prp.getProperty("p"))).sendKeys(prp.getProperty("password"));		
 		//h.passMain().sendKeys("admin");
 		
-		driver.findElement(By.xpath("//input[@type='submit']")).click();
+		driver.findElement(By.xpath(prp.getProperty("login"))).click();
 		//h.loginButton().click();
+		
 	}
 	
 	public void screens(String string) throws IOException {
@@ -71,8 +83,15 @@ public WebDriver driver;
 	}
 
 	@AfterClass
-	public void afterclass() {
-		driver.close();
+	public void afterclass() throws InterruptedException {
+	
+		driver.findElement(By.xpath(prp.getProperty("logout"))).click();
+		Thread.sleep(3000);
+		//driver.close();
+	}
+	public void mysendkey (String xpath, String value)
+	{
+		//driver.findElement(By.xpath(prp.getProperty("xpsth"))).sendKeys(value);
 	}
 }
 
