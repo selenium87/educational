@@ -87,7 +87,7 @@ public Properties prp = new Properties();
 	
 		driver.findElement(By.xpath(prp.getProperty("logout"))).click();
 		Thread.sleep(3000);
-		//driver.close();
+		driver.close();
 	}
 	public void mysendkey (String xpath, String value)
 	{
