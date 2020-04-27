@@ -3,15 +3,15 @@ package execution;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-import org.apache.logging.log4j.LogManager;
+
 
 import org.openqa.selenium.By;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.*;
-import org.apache.logging.log4j.*;
-import org.apache.logging.log4j.Logger;
+
+
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
@@ -27,7 +27,7 @@ public class ShipmentTest extends Base{
 	//Properties pr = new Properties();
 	//Drd d = new Drd();
 	
-	static private Logger log = LogManager.getLogger(ShipmentTest.class.getName());
+	//static private Logger log = LogManager.getLogger(ShipmentTest.class.getName());
   
 @Test(priority = 0)
 
@@ -36,9 +36,9 @@ public class ShipmentTest extends Base{
 	Home h = new Home(driver);
 	
 	h.sales().click();
-	log.info("clicked on sales");
+	//log.info("clicked on sales");
 	h.shipment().click();
-	log.info("clicked on shipment");
+	//log.info("clicked on shipment");
 }
 
 
@@ -55,15 +55,15 @@ public class ShipmentTest extends Base{
 		try {
 			Select ss = new Select(ee);
 			ss.selectByVisibleText(b);
-			log.info("selected");
+			//log.info("selected");
 		}
 	
 		catch(Throwable e) {
 			ee.sendKeys(b);
-		log.info("key sent");
+		//log.info("key sent");
 		}
 		sh.search().click();
-		log.info("clicked on search");
+		//log.info("clicked on search");
 		
 		//sh.startdate().sendKeys(a);
 		//sh.enddate().sendKeys(a);;
