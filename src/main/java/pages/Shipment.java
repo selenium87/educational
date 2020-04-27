@@ -6,10 +6,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class Shipment {
-@FindBy(xpath="//*[@id=\"StartDate\"]")
+@FindBy(id="StartDate")
 private WebElement sdate;
 
-@FindBy(xpath="//*[@id=\"EndDate\"]")
+@FindBy(id="EndDate")
 private  WebElement edate;
 @FindBy(id="CountryId")
 private WebElement count;
