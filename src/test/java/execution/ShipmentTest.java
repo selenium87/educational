@@ -24,10 +24,7 @@ import pages.Shipment;
 
 public class ShipmentTest extends Base{
 	
-	//Properties pr = new Properties();
-	//Drd d = new Drd();
 	
-	//static private Logger log = LogManager.getLogger(ShipmentTest.class.getName());
   
 @Test(priority = 0)
 
@@ -36,9 +33,9 @@ public class ShipmentTest extends Base{
 	Home h = new Home(driver);
 	
 	h.sales().click();
-	//log.info("clicked on sales");
+	
 	h.shipment().click();
-	//log.info("clicked on shipment");
+	
 }
 
 
@@ -55,18 +52,15 @@ public class ShipmentTest extends Base{
 		try {
 			Select ss = new Select(ee);
 			ss.selectByVisibleText(b);
-			//log.info("selected");
+			
 		}
 	
 		catch(Throwable e) {
 			ee.sendKeys(b);
-		//log.info("key sent");
+		
 		}
 		sh.search().click();
-		//log.info("clicked on search");
 		
-		//sh.startdate().sendKeys(a);
-		//sh.enddate().sendKeys(a);;
 }
 	
 @DataProvider(name="datas")
@@ -97,7 +91,7 @@ public void track() throws FileNotFoundException, IOException {
 @Test(priority = 4,dataProvider = "data2")
 public void secondsearch(WebElement f, String s) {
 	Shipment sh = new Shipment(driver);
-	//WebElement rr=driver.findElement(By.id(f));
+	
 	
 	try {
 		Select tt= new Select(f);
