@@ -21,10 +21,8 @@ public class CustomerTest extends Base {
 	@Test(priority = 1)
 	public void withFirstSetOfData() throws IOException, InterruptedException {
 		EmalsPOM pom = new EmalsPOM(driver);
-		//Properties prop = new Properties();
-		//InputStream input = new FileInputStream(
-				//System.getProperty("user.dir") + "\\src\\test\\java\\utilities\\EmalData.properties");
-		//prp.load(input);
+		
+		
 		Thread.sleep(2000);
 		pom.Customers.click();
 		pom.CustomerSub.click();
@@ -79,10 +77,8 @@ public class CustomerTest extends Base {
 
 	public void withSecondSetOfData() throws IOException, InterruptedException {
 		EmalsPOM pom = new EmalsPOM(driver);
-	//	Properties prp = new Properties();
-	//	InputStream input = new FileInputStream(
-				//System.getProperty("user.dir") + "\\src\\test\\java\\utilities\\EmalData.properties");
-		//prp.load(input);
+	
+		
 		Thread.sleep(2000);
 		pom.Customers.click();
 		pom.CustomerSub.click();
