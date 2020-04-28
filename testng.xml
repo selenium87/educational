@@ -2,14 +2,14 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
   <test thread-count="5" name="Test">
-  <parameter name="browser" value="firefox"></parameter>
+  <parameter name="browser" value="chrome"></parameter>
  <classes>
 
 
-
+  <class name="execution.ShipmentTest"/>
   <class name="execution.BestsellerTest"/>
    <class name="execution.CustomerTest"/>
-   <class name="execution.ShipmentTest"/>
+  
 
  </classes>
   </test> <!-- Test -->
