@@ -55,31 +55,21 @@ public Properties prp = new Properties();
 		driver.get(prp.getProperty("url"));
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		
+		driver.findElement(By.id(prp.getProperty("e"))).clear();
 		driver.findElement(By.id(prp.getProperty("e"))).sendKeys(prp.getProperty("username"));
-		
+		driver.findElement(By.id(prp.getProperty("p"))).clear();
 		driver.findElement(By.id(prp.getProperty("p"))).sendKeys(prp.getProperty("password"));	
 		
-		
-		//driver.findElement(By.xpath(prp.getProperty("email"))).sendKeys("admin1");
-		//mysendkey("email", "admin1");
-		
-		
-		//nameMain().sendKeys("admin@yourstore.com");
-	
-		//driver.findElement(By.id(prp.getProperty("p"))).sendKeys(prp.getProperty("password"));		
-		//h.passMain().sendKeys("admin");
-		
 		driver.findElement(By.xpath(prp.getProperty("login"))).click();
-		//h.loginButton().click();
+		
 		
 	}
 	
-	public void screens(String string) throws IOException {
+	public void screens(String result) throws IOException {
 		
 		String stamp =new SimpleDateFormat("E, MMM-dd-yyyy-HH-mm-ss").format(new Date());
 	    File take =((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(take,new File(System.getProperty("user.dir") + "\\screenshots\\"+string+stamp+".png"));
+		FileUtils.copyFile(take,new File(System.getProperty("user.dir") + "\\screenshots\\"+result+stamp+".png"));
 	}
 
 	@AfterClass
