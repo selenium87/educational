@@ -6,9 +6,10 @@
  <classes>
 
 
-<class name="execution.ShipmentTest"/>
+
   <class name="execution.BestsellerTest"/>
    <class name="execution.CustomerTest"/>
+   <class name="execution.ShipmentTest"/>
 
  </classes>
   </test> <!-- Test -->
