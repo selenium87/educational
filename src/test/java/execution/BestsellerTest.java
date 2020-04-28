@@ -17,7 +17,7 @@ import pages.BestSellerPOM;
 
 public class BestsellerTest extends Base{
 
-	//Properties prop = new Properties();
+	
 	String run;
 	
 	@Test
@@ -30,8 +30,7 @@ public class BestsellerTest extends Base{
 	@Test(dataProvider = "dp")
 	public void test2(String var1, String var2) throws IOException {
 
-	//	FileInputStream ip = new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\java\\utilities\\sayeedData.properties");
-		//prop.load(ip);
+	
 		
 		WebElement field = driver.findElement(By.id(var1));
 		try {
@@ -44,7 +43,7 @@ public class BestsellerTest extends Base{
 	@Test
 	public void test3() throws IOException {
 		BestSellerPOM obj = new BestSellerPOM(driver);
-		//screens("run"+run);
+		
 		obj.pushsearch().click();
 	} 
 
