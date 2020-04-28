@@ -81,7 +81,7 @@ public Properties prp = new Properties();
 	}
 	public void mysendkey (String xpath, String value)
 	{
-		//driver.findElement(By.xpath(prp.getProperty("xpsth"))).sendKeys(value);
+		
 	}
 }
 
