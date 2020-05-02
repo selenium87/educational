@@ -75,7 +75,7 @@ public Properties prp = new Properties();
 	@AfterClass
 	public void afterclass() throws InterruptedException {
 	
-		driver.findElement(By.xpath(prp.getProperty("logout"))).click();
+		//driver.findElement(By.xpath(prp.getProperty("logout"))).click();
 		Thread.sleep(3000);
 		driver.close();
 	}
